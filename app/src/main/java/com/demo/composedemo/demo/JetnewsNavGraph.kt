@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
 //import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -27,6 +28,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.jetnews.data.AppContainer
 import com.example.jetnews.ui.JetnewsDestinations
+import com.example.jetnews.ui.interests.InterestsRoute
+import com.example.jetnews.ui.interests.InterestsViewModel
 
 //import com.example.jetnews.ui.home.HomeRoute
 //import com.example.jetnews.ui.home.HomeViewModel
@@ -60,16 +63,16 @@ fun JetnewsNavGraph(
             Text(text = "nihao HOME_ROUTE", modifier = Modifier.fillMaxWidth())
         }
         composable(JetnewsDestinations.INTERESTS_ROUTE) {
-//            val interestsViewModel: InterestsViewModel = viewModel(
-//                factory = InterestsViewModel.provideFactory(appContainer.interestsRepository)
-//            )
-//            InterestsRoute(
-//                interestsViewModel = interestsViewModel,
-//                isExpandedScreen = isExpandedScreen,
-//                openDrawer = openDrawer
-//            )
+            val interestsViewModel: InterestsViewModel = viewModel(
+                factory = InterestsViewModel.provideFactory(appContainer.interestsRepository)
+            )
+            InterestsRoute(
+                interestsViewModel = interestsViewModel,
+                isExpandedScreen = isExpandedScreen,
+                openDrawer = openDrawer
+            )
 
-            Text(text = "nihao INTERESTS_ROUTE", modifier = Modifier.fillMaxWidth())
+//            Text(text = "nihao INTERESTS_ROUTE", modifier = Modifier.fillMaxWidth())
         }
     }
 }

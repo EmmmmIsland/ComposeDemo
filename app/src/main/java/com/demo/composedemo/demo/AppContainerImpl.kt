@@ -17,12 +17,14 @@
 package com.example.jetnews.data
 
 import android.content.Context
+import com.example.jetnews.data.interests.InterestsRepository
+import com.example.jetnews.data.interests.impl.FakeInterestsRepository
 
 /**
  * Dependency Injection container at the application level.
  */
 interface AppContainer {
-
+    val interestsRepository: InterestsRepository
 }
 
 /**
@@ -31,6 +33,8 @@ interface AppContainer {
  * Variables are initialized lazily and the same instance is shared across the whole app.
  */
 class AppContainerImpl(private val applicationContext: Context) : AppContainer {
-
+    override val interestsRepository: InterestsRepository by lazy {
+        FakeInterestsRepository()
+    }
 
 }
