@@ -17,8 +17,8 @@
 package com.example.jetnews
 
 import android.app.Application
-import com.example.jetnews.data.AppContainer
-import com.example.jetnews.data.AppContainerImpl
+import com.demo.composedemo.demo.AppContainer
+import com.demo.composedemo.demo.AppContainerImpl
 
 class DemoApplication : Application() {
 

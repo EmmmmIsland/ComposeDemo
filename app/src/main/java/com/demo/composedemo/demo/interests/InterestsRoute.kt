@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.jetnews.ui.interests
+package com.demo.composedemo.demo.interests
 
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable

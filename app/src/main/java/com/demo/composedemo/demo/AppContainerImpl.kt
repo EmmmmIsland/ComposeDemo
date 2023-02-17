@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.example.jetnews.data
+package com.demo.composedemo.demo
 
 import android.content.Context
-import com.example.jetnews.data.interests.InterestsRepository
-import com.example.jetnews.data.interests.impl.FakeInterestsRepository
+import com.demo.composedemo.demo.datas.InterestsRepository
+import com.demo.composedemo.demo.datas.impl.FakeInterestsRepository
 
 /**
  * Dependency Injection container at the application level.

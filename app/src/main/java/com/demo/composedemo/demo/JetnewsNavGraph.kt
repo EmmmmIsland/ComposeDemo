@@ -26,10 +26,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.jetnews.data.AppContainer
 import com.example.jetnews.ui.JetnewsDestinations
-import com.example.jetnews.ui.interests.InterestsRoute
-import com.example.jetnews.ui.interests.InterestsViewModel
+import com.demo.composedemo.demo.interests.InterestsRoute
+import com.demo.composedemo.demo.interests.InterestsViewModel
 
 //import com.example.jetnews.ui.home.HomeRoute
 //import com.example.jetnews.ui.home.HomeViewModel

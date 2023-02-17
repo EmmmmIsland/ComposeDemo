@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.example.jetnews.data.interests.impl
+package com.demo.composedemo.demo.datas.impl
 
-import com.example.jetnews.data.Result
-import com.example.jetnews.data.interests.InterestSection
-import com.example.jetnews.data.interests.InterestsRepository
-import com.example.jetnews.data.interests.TopicSelection
+import com.demo.composedemo.demo.datas.Result
+import com.demo.composedemo.demo.datas.InterestSection
+import com.demo.composedemo.demo.datas.InterestsRepository
+import com.demo.composedemo.demo.datas.TopicSelection
 import com.example.jetnews.utils.addOrRemove
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow

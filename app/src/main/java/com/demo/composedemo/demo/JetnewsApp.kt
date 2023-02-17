@@ -31,7 +31,6 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.demo.composedemo.demo.components.AppNavRail
-import com.example.jetnews.data.AppContainer
 import com.example.jetnews.ui.JetnewsDestinations
 import com.example.jetnews.ui.JetnewsNavigationActions
 import com.example.jetnews.ui.theme.JetnewsTheme

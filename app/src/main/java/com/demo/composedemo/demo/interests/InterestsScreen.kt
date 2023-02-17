@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.jetnews.ui.interests
+package com.demo.composedemo.demo.interests
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.widget.Toast
@@ -73,10 +73,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.demo.composedemo.R
-import com.example.jetnews.data.Result
-import com.example.jetnews.data.interests.InterestSection
-import com.example.jetnews.data.interests.TopicSelection
-import com.example.jetnews.data.interests.impl.FakeInterestsRepository
+import com.demo.composedemo.demo.datas.Result
+import com.demo.composedemo.demo.datas.InterestSection
+import com.demo.composedemo.demo.datas.TopicSelection
+import com.demo.composedemo.demo.datas.impl.FakeInterestsRepository
 import com.example.jetnews.ui.theme.JetnewsTheme
 import kotlin.math.max
 import kotlinx.coroutines.runBlocking
