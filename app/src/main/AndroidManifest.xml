@@ -17,7 +17,7 @@
         android:theme="@style/Theme.ComposeDemo"
         tools:targetApi="31">
         <activity
-            android:name=".demo.DemoActivity"
+            android:name=".PerActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeDemo">
@@ -28,6 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".demo.DemoActivity"/>
     </application>
 
 </manifest>

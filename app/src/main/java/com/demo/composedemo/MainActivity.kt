@@ -1,16 +1,18 @@
 package com.demo.composedemo
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
@@ -24,22 +26,26 @@ import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material.icons.sharp.Settings
 import androidx.compose.material.icons.twotone.Settings
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Blue
 import androidx.compose.ui.graphics.Color.Companion.Green
 import androidx.compose.ui.graphics.Color.Companion.Red
 import androidx.compose.ui.graphics.Color.Companion.Yellow
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.*
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.demo.composedemo.ui.theme.ComposeDemoTheme
+import com.demo.composedemo.view.BackView
 
 
 class MainActivity : ComponentActivity() {
@@ -72,16 +78,15 @@ class MainActivity : ComponentActivity() {
 //            SelectedView().SelectedPreview()
 //            ScaffoldView().ScaffoldPreview()
 //            ScaffoldView().NavigationPreview()
-            LoginStateView().LoginStatePreview()
+            Column() {
+                BackView().Back(finishActivity = { this@MainActivity.finish() })
+                LoginStateView().LoginStatePreview()
+            }
         }
 
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
 
 /**
  * collectIsPressedAsState 按压状态
