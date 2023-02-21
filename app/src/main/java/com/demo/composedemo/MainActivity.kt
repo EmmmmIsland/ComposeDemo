@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -46,6 +47,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.demo.composedemo.ui.theme.ComposeDemoTheme
 import com.demo.composedemo.view.BackView
+import com.demo.composedemo.view.ExIconView
+import com.demo.composedemo.view.ExLayoutView
 
 
 class MainActivity : ComponentActivity() {
@@ -78,10 +81,13 @@ class MainActivity : ComponentActivity() {
 //            SelectedView().SelectedPreview()
 //            ScaffoldView().ScaffoldPreview()
 //            ScaffoldView().NavigationPreview()
-            Column() {
-                BackView().Back(finishActivity = { this@MainActivity.finish() })
-                LoginStateView().LoginStatePreview()
-            }
+//            Column() {
+//                BackView().Back(finishActivity = { this@MainActivity.finish() })
+//                LoginStateView().LoginStatePreview()
+//            }
+
+//            ExLayoutView().exLayout()
+            ExIconView().exIcon()
         }
 
     }

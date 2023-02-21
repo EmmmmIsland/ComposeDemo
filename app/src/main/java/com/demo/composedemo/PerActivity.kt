@@ -95,7 +95,7 @@ fun Greeting() {
         }
 
         Box(
-            contentAlignment = Alignment.Center,
+            contentAlignment = Alignment.BottomEnd,
             modifier = Modifier
                 .height(60.dp)
                 .width(200.dp)
@@ -126,9 +126,11 @@ fun Greeting() {
                 })
         ) {
             Text(textAlign = TextAlign.Center, fontSize = 20.sp, text = "XXXX")
-
         }
 
+        BoxWithConstraints {
+            Text("My minHeight is $minHeight while my maxWidth is $maxWidth")
+        }
     }
 }
 
