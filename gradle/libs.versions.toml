@@ -3,14 +3,18 @@
 # Do not add a dependency to an individual sample, edit the global version instead.
 #####
 [versions]
+androidx-compose-bom = "2022.12.00"
 material3V = "1.0.1"
 androidx-navigation = "2.5.3"
 androidx-lifecycle-compose = "2.4.1"
 androidx-lifecycle-runtime-compose = "2.6.0-alpha01"
 
 [libraries]
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidx-compose-bom" }
+
 androidx-compose-material3 = { module = "androidx.compose.material3:material3"  , version.ref = "material3V" }
-androidx-compose-materialWindow = { module = "androidx.compose.material3:material3-window-size-class", version.ref = "material3V" }
+#androidx-compose-materialWindow = { module = "androidx.compose.material3:material3-window-size-class", version.ref = "material3V" }
+androidx-compose-materialWindow = { module = "androidx.compose.material3:material3-window-size-class"}
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx-navigation" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidx-navigation" }

@@ -62,6 +62,7 @@ class PerActivity : ComponentActivity() {
 }
 
 @OptIn(ExperimentalFoundationApi::class)
+@Preview(showBackground = true)
 @Composable
 fun Greeting() {
     val context = LocalContext.current
